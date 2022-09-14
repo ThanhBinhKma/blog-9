@@ -12,3 +12,8 @@ Route::get('/', [HomeController::class, 'index'])->name('index');
 Route::get('/posts', [HomeController::class, 'posts'])->name('posts.index');
 Route::get('/author', [HomeController::class, 'author'])->name('author.index');
 require __DIR__ . '/auth.php';
+
+
+Route::get('/admin/{any}', function () {
+  return view('admin');
+});
